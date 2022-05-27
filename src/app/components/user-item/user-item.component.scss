@@ -1,0 +1,16 @@
+.btn-user {
+  width: 220px;
+  height: 60px;
+
+  border: 1px solid #cccacc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,13 @@
+<div class="card alert alert-warning" style="margin-bottom: 10px;">
+  <div class="card-body inner-post">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.body}}</p>
+    <button class="btn btn-warning" (click)="getComments(post.id)">Show/Hide Comments</button>
+  </div>
+  <div *ngIf="isCommentsVisible">
+    <app-comments-user *ngFor="let comment of comments"
+                       [comment]="comment"
+    ></app-comments-user>
+  </div>
+</div>
+

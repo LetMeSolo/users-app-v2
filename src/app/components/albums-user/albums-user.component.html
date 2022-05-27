@@ -1,0 +1,9 @@
+<div class="alert alert-warning album-inner">
+  <h4>{{album.title}}</h4>
+  <br>
+  <button class="btn btn-warning" (click)="getPhotos(album.id)">Show/Hide Photos</button>
+  <div><br></div>
+    <div class="photos-container" *ngIf="isPhotosVisible">
+      <app-photos-user *ngFor="let photo of photos" [photo]="photo"></app-photos-user>
+    </div>
+</div>

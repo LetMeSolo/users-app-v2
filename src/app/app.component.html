@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="users-container">
+    <app-user-item *ngFor="let user of users"
+                   [user]="user"
+                   (click)="getUserInfo(user.id)"
+    ></app-user-item>
+  </div>
+
+  <div class="user-info-container" *ngIf="userInfo">
+    <div class="user-info-inner alert alert-info">
+      <app-user-info [userInfo]="userInfo"></app-user-info>
+      <br>
+      <button class="btn btn-warning" (click)="getPosts(userInfo.id)">Show Posts</button>
+      <button class="btn btn-warning" (click)="getTodos(userInfo.id)">Show Todos</button>
+      <button class="btn btn-warning" (click)="getAlbums(userInfo.id)">Show Albums</button>
+    </div>
+  </div>
+
+  <div class="user-posts-container">
+      <app-user-post *ngFor="let post of posts"
+                     [post]="post"
+      ></app-user-post>
+  </div>
+
+  <div class="todos-container">
+    <app-user-todos *ngFor="let todo of todos"
+                    [todo]="todo"
+    ></app-user-todos>
+  </div>
+
+  <div class="albums-container">
+    <app-albums-user *ngFor="let album of albums"
+                     [album]="album"
+    ></app-albums-user>
+  </div>
+</div>
+

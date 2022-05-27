@@ -1,0 +1,6 @@
+<div class="inner-todo">
+  <div class="alert alert-success" *ngIf="todo.completed == true"><p>{{todo.title}}</p></div>
+</div>
+<div class="inner-todo">
+  <div class="alert alert-danger" *ngIf="todo.completed == false"><p>{{todo.title}}</p></div>
+</div>
